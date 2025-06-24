@@ -104,8 +104,12 @@ article {
 }
 
 .item img {
+    width: 200px;
+    height: 300px;
     object-fit: cover; /* Preencha todo o espaço mesmo que precise cortar parte da imagem para caber */
     border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .item.esquerda img, .item.direita img {
@@ -151,6 +155,21 @@ article {
 .caracteristica-item p {
     font-size: 1rem;
     line-height: 1.5; /* espaçamento vertical entre as linhas (docs) */
+}
+
+.container-especialidades {
+    display: flex; 
+    justify-content: start;
+}
+
+.container-especialidades h1 {
+    color: white;
+}
+
+.container-especialidades > section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;    
 }
 
 .rodape {
@@ -230,7 +249,11 @@ article {
 
 .modal-conteudo h2 {
     margin-top: 0;
-    color: white
+    color: white;
+}
+
+.modal-conteudo h4 {
+    color: white;
 }
 
 .modal-conteudo p {
@@ -238,25 +261,25 @@ article {
     color: white;
 }
 
-.item img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.item img.fade-out {
-    opacity: 0;
-}
-
-.linkContato {
+.modal-conteudo section{
+    background-color: rgb(32, 32, 32); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    border-radius: 5px;
     transition: transform 0.15s ease-out;
 }
 
-.linkContato:hover {
+.modal-conteudo section:hover{
     transform: scale(1.05);
+}
+
+.modal-conteudo img{
+    height: 5vh;
+}
+
+.modal-conteudo a {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -285,14 +308,4 @@ article {
     .logo-container img {
         display: none;
     }
-}
-
-.caracteristica-item h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.caracteristica-item p {
-    font-size: 1rem;
-    line-height: 1.5; /* espaçamento vertical entre as linhas (docs) */
 }
