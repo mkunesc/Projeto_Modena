@@ -180,6 +180,14 @@ article {
     font-size: 1rem;
 }
 
+.rodape-item a {
+    color: white;
+}
+
+.rodape-item a:hover {
+    color: #0000EE;
+}
+
 .modal-overlay {
     display: none;
     position: fixed;
@@ -196,7 +204,6 @@ article {
 
 .modal-conteudo {
     background-color: rgb(15, 15, 15);
-    border: solid 1px white;
     border-radius: 5px;
     padding: 2rem;
     border-radius: 12px;
@@ -231,25 +238,6 @@ article {
     color: white;
 }
 
-
-@media (max-width: 768px) {
-    .rodape {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .caracteristicas-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .caracteristica-item {
-        max-width: 90%;
-    }
-}
-
 .item img {
     width: 200px;
     height: 300px;
@@ -263,27 +251,48 @@ article {
     opacity: 0;
 }
 
-@media (max-width: 670px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 2rem;
-    }
+.linkContato {
+    transition: transform 0.15s ease-out;
+}
 
-    nav ul {
+.linkContato:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .rodape {
         flex-direction: column;
-        gap: 1rem;
         align-items: center;
     }
 
-    header a {
-        margin-bottom: 0;
-        background: gray;
+    .caracteristicas-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .titulo {
-        margin-bottom: 0;
-        font-size: 2rem;
-        background: #1d1f20;
+    .caracteristica-item {
+        max-width: 90%;
     }
+}
+
+@media (max-width: 725px) {
+    .carrossel-container{
+        display: none;
+    }
+}
+
+@media (max-width: 672px) {
+    .logo-container img {
+        display: none;
+    }
+}
+
+.caracteristica-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.caracteristica-item p {
+    font-size: 1rem;
+    line-height: 1.5; /* espaçamento vertical entre as linhas (docs) */
 }
